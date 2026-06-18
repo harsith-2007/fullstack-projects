@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html>
+<head><title>College Student Registration</title></head>
+<body>
+<h2>College Student Registration Form</h2>
+<form>
+Name:<input type="text" id="name"><br><br>
+Age:<input type="number" id="age"><br><br>
+Phone Number:<input type="number" id="phone"><br><br>
+Email:<input type="email" id="email"><br><br>
+Address:<textarea id="address"></textarea><br><br>
+Gender:<select id="gender"><option>Select</option><option>Male</option><option>Female</option><option>Other</option></select><br><br>
+Department:<select id="department"><option>Select Department</option><option>CSE</option><option>ECE</option><option>EEE</option><option>Mechanical</option><option>Civil</option></select><br><br>
+10th Percentage:<input type="number" id="mark10"><br><br>
+12th Percentage:<input type="number" id="mark12"><br><br>
+<button type="button" onclick="registerStudent()">Register</button>
+</form>
+<h3>Output</h3>
+<p id="output"></p>
+<script>
+function registerStudent(){
+let name=document.getElementById("name").value;
+let age=document.getElementById("age").value;
+let phone=document.getElementById("phone").value;
+let email=document.getElementById("email").value;
+let address=document.getElementById("address").value;
+let gender=document.getElementById("gender").value;
+let department=document.getElementById("department").value;
+let mark10=document.getElementById("mark10").value;
+let mark12=document.getElementById("mark12").value;
+document.getElementById("output").innerHTML=
+"Name: "+name+"<br>"+
+"Age: "+age+"<br>"+
+"Phone: "+phone+"<br>"+
+"Email: "+email+"<br>"+
+"Address: "+address+"<br>"+
+"Gender: "+gender+"<br>"+
+"Department: "+department+"<br>"+
+"10th Percentage: "+mark10+"%<br>"+
+"12th Percentage: "+mark12+"%";
+}
+</script>
+</body>
+</html>
