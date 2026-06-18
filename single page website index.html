@@ -1,0 +1,324 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Harsith Portfolio</title>
+
+<style>
+*{
+margin:0;
+padding:0;
+box-sizing:border-box;
+font-family:Arial,sans-serif;
+scroll-behavior:smooth;
+}
+
+body{
+background:#f4f4f4;
+color:#333;
+line-height:1.6;
+}
+
+/* Navigation */
+nav{
+position:fixed;
+top:0;
+width:100%;
+background:#111;
+padding:15px;
+text-align:center;
+z-index:1000;
+}
+
+nav a{
+color:white;
+text-decoration:none;
+margin:0 20px;
+font-size:18px;
+}
+
+nav a:hover{
+color:#00aaff;
+}
+
+/* Header */
+header{
+height:100vh;
+background:linear-gradient(rgba(0,0,0,0.6),rgba(0,0,0,0.6)),
+url("https://images.unsplash.com/photo-1498050108023-c5249f4df085");
+background-size:cover;
+background-position:center;
+display:flex;
+justify-content:center;
+align-items:center;
+text-align:center;
+color:white;
+padding-top:60px;
+}
+
+header h1{
+font-size:55px;
+margin-bottom:10px;
+}
+
+header p{
+font-size:22px;
+letter-spacing:2px;
+}
+
+.profile{
+width:150px;
+height:150px;
+border-radius:50%;
+border:5px solid white;
+margin:20px auto;
+background:url("https://cdn-icons-png.flaticon.com/512/3135/3135715.png");
+background-size:cover;
+}
+
+/* Sections */
+section{
+padding:60px 10%;
+}
+
+.section-title{
+font-size:32px;
+margin-bottom:30px;
+text-align:center;
+}
+
+.section-title::after{
+content:"";
+width:80px;
+height:4px;
+background:#007bff;
+display:block;
+margin:10px auto;
+}
+
+.about{
+background:white;
+}
+
+.grid{
+display:grid;
+grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
+gap:30px;
+}
+
+.card{
+background:white;
+padding:25px;
+border-radius:10px;
+box-shadow:0 0 10px rgba(0,0,0,0.1);
+transition:0.3s;
+}
+
+.card:hover{
+transform:translateY(-5px);
+}
+
+.skills{
+background:#243b64;
+color:white;
+}
+
+.skill-box{
+background:rgba(255,255,255,0.1);
+padding:20px;
+border-radius:10px;
+}
+
+.contact{
+background:#dfe8f3;
+text-align:center;
+}
+
+.contact p{
+margin:10px 0;
+font-size:18px;
+}
+
+footer{
+background:#111;
+color:white;
+text-align:center;
+padding:20px;
+}
+
+/* Mobile */
+@media(max-width:768px){
+nav a{
+display:block;
+margin:10px;
+}
+}
+</style>
+</head>
+
+<body>
+
+<!-- Navigation -->
+<nav>
+<a href="#home">Home</a>
+<a href="#about">About</a>
+<a href="#education">Education</a>
+<a href="#projects">Projects</a>
+<a href="#skills">Skills</a>
+<a href="#contact">Contact</a>
+</nav>
+
+<!-- Header -->
+<header id="home">
+<div>
+<div class="profile"></div>
+<h1>Harsith</h1>
+<p>AI & ML Engineer | Power BI Developer | Flutter Developer</p>
+</div>
+</header>
+
+<!-- Summary -->
+<section class="about" id="about">
+<h2 class="section-title">Summary</h2>
+
+<div class="card">
+<p>
+I posses a B.Tech in Artificial Intelligence And Machine Learning and I have completed 
+my degree in 2028 and Having a Work Experience of Two Years In the Field of Power BI
+and Flutter As a App Developer and I have a Knowledge in full stack and Web development
+and others. Aspiring Power BI Developer with hands-on experience in building interactive 
+dashboards and reports. Skilled in Power BI, DAX, Power Query, and data visualization 
+techniques. Passionate about transforming raw data into meaningful business insights.
+</p>
+</div>
+</section>
+
+<!-- Education -->
+<section id="education">
+
+<h2 class="section-title">Education</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>Bachelor of Technology</h3>
+<br>
+<p>Kongu Engineering College</p>
+<p>Erode</p>
+<p>B.Tech - AI & ML</p>
+</div>
+
+<div class="card">
+<h3>Secondary School</h3>
+<br>
+<p>Nava Bharat National School</p>
+<p>Annur</p>
+</div>
+
+</div>
+</section>
+
+<!-- Projects -->
+<section id="projects">
+
+<h2 class="section-title">Projects</h2>
+
+<div class="grid">
+
+<div class="card">
+<h3>AI Web Application for Career Consultation</h3>
+<br>
+<ul>
+<li>Developed an AI-based web application that provides personalized career guidance based on user interests, skills, and preferences.</li>
+<li>Implemented intelligent recommendation logic to suggest suitable career paths and learning resources.</li>
+<li>Enhanced user experience through a clean interface and data-driven insights for informed decision-making.</li>
+</ul>
+</div>
+
+<div class="card">
+<h3>AI Application for Doubt Solver</h3>
+<br>
+<ul>
+<li>Built an AI-powered application to assist users by providing personalized answers to academic and technical doubts.li>
+<li>Utilized natural language processing techniques to understand user queries and generate relevant answers.</li>
+<li>Generated personalized answers</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- Internship -->
+<section>
+
+<h2 class="section-title">Internship</h2>
+
+<div class="card">
+<h3>GO TO MOCK AI</h3>
+<p>December 2025 - January 2026</p>
+
+<br>
+
+<ul>
+<li>Worked as a full stack developer in the project GO-TO-MOCK AI published by Punchbiz.</li>
+<li>Developed a student-focused learning platform that provides doubt resolution, skill enhancement, and mock interview assessments.</li>
+<li>Enabled students to evaluate their skill levels through structured interviews while ensuring proper security and data protection.</li>
+<li>Built student learning platform.Created mock interview system.</li>
+</ul>
+
+</div>
+</section>
+
+<!-- Skills -->
+<section class="skills" id="skills">
+
+<h2 class="section-title">Skills</h2>
+
+<div class="grid">
+
+<div class="skill-box">
+<h3>Technical Skills</h3>
+<br>
+<ul>
+<li>Java Developer</li>
+<li>Power BI</li>
+<li>Digital Marketing</li>
+<li>Flutter Developer</li>
+<li>Web Development</li>
+</ul>
+</div>
+
+<div class="skill-box">
+<h3>Soft Skills</h3>
+<br>
+<ul>
+<li>Problem Solving</li>
+<li>Design Thinking</li>
+<li>Critical Thinking</li>
+<li>Communication</li>
+<li>Team Collaboration</li>
+</ul>
+</div>
+
+</div>
+</section>
+
+<!-- Contact -->
+<section class="contact" id="contact">
+
+<h2 class="section-title">Contact Me</h2>
+
+<p>Email: harsithsenthilkumar5@gmail.com</p>
+<p>Phone: 9384273806</p>
+<p>Location: Sultanpet, Coimbatore</p>
+
+</section>
+
+<!-- Footer -->
+<footer>
+© 2026 Harsith Portfolio Website
+</footer>
+
+</body>
+</html>

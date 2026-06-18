@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Simple Calculators</title>
+<style>
+body{
+text-align:center;
+font-family:Arial;
+margin-top:100px;
+}
+input{
+width:150px;
+padding:8px;
+margin:5px;
+}
+button{
+padding:10px;
+margin:5px;
+width:40px;
+}
+</style>
+</head>
+
+<body>
+<h2> Calculator</h2>
+<input type="number" id="num1" placeholder="First Number"><br>
+<input type="number" id="num2" placeholder="Second Number"><br>
+<button onclick="calc('+')">+</button>
+<button onclick="calc('-')">-</button>
+<button onclick="calc('*')">*</button>
+<button onclick="calc('/')">/</button>
+<p id="result">Result: </p>
+
+<script>
+function calc(op){
+let a = Number(document.getElementById("num1").value);
+let b = Number(document.getElementById("num2").value);
+let ans;
+
+if(op=="+") ans = a + b;
+else if(op=="-") ans = a - b;
+else if(op=="*") ans = a * b;
+else if(op=="/") ans = a / b;
+
+document.getElementById("result").innerHTML = "Result: " + ans;
+}
+</script>
+</body>
+</html>
