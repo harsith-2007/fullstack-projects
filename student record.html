@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Student Management System</title>
+<style>
+body{font-family:Arial;margin:20px;}
+h2{text-align:center;}
+input,select{width:200px;padding:5px;margin:5px;}
+button{padding:5px 10px;margin:5px;}
+table{width:100%;border-collapse:collapse;margin-top:20px;}
+table,th,td{border:1px solid black;}
+th,td{padding:10px;text-align:center;}
+</style>
+</head>
+<body>
+<h2>Student Management System</h2>
+<form id="studentForm">
+<input type="hidden" id="editIndex" value="-1">
+<input type="text" id="name" placeholder="Student Name" required>
+<input type="email" id="email" placeholder="Email" required>
+<select id="course" required>
+<option value="">Select Course</option>
+<option>Computer Science</option>
+<option>Data Science</option>
+<option>IT</option>
+<option>Cyber Security</option>
+</select>
+<input type="text" id="idNumber" placeholder="Student ID" required>
+<button type="submit">Save</button>
+</form>
+<table>
+<thead>
+<tr>
+<th>Name</th>
+<th>Email</th>
+<th>Course</th>
+<th>Student ID</th>
+<th>Action</th>
+</tr>
+</thead>
+<tbody id="studentTable"></tbody>
+</table>
+<script>
+let students=[];
+document.getElementById("studentForm").addEventListener("submit",function(e){
+e.preventDefault();
+let index=document.getElementById("editIndex").value;
+let student={
+name:document.getElementById("name").value,
+email:document.getElementById("email").value,
+course:document.getElementById("course").value,
+idNumber:document.getElementById("idNumber").value
+};
+if(index==-1){
+students.push(student);
+}
+else{
+students[index]=student;
+document.getElementById("editIndex").value=-1;
+}
+this.reset();
+displayStudents();
+});
+function displayStudents(){
+let table=document.getElementById("studentTable");
+table.innerHTML="";
+for(let i=0;i<students.length;i++){
+table.innerHTML+=`
+<tr>
+<td>${students[i].name}</td>
+<td>${students[i].email}</td>
+<td>${students[i].course}</td>
+<td>${students[i].idNumber}</td>
+<td>
+<button onclick="editStudent(${i})">Edit</button>
+<button onclick="deleteStudent(${i})">Delete</button>
+</td>
+</tr>`;
+}
+}
+function editStudent(index){
+document.getElementById("name").value=students[index].name;
+document.getElementById("email").value=students[index].email;
+document.getElementById("course").value=students[index].course;
+document.getElementById("idNumber").value=students[index].idNumber;
+document.getElementById("editIndex").value=index;
+}
+function deleteStudent(index){
+students.splice(index,1);
+displayStudents();
+}
+</script>
+</body>
+</html>
