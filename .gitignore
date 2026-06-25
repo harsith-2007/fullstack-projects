@@ -1,0 +1,13 @@
+node_modules/
+package-lock.json
+.DS_Store
+.env
+*.log
+*.class
+.idea/
+.vscode/
+dist/
+build/
+*.jar
+.env.local
+.env.*.local
